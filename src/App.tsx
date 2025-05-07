@@ -5,7 +5,7 @@ function App() {
   return (
     <>
     <GlobalStyles />
-      HI
+      HI from new project and branch
     </>
   )
 }
