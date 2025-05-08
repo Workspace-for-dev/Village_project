@@ -1,3 +1,4 @@
+import FirmCard from "./components/FirmCard/FirmCard";
 import GlobalStyles from "./styles/GlobalStyles";
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
   return (
     <>
     <GlobalStyles />
-      HI from new project and branch
+      <FirmCard />
     </>
   )
 }
