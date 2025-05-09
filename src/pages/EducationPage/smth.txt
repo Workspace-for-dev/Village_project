@@ -1,0 +1,65 @@
+// with timer
+// import { useEffect, useState } from "react";
+
+// function EducationPage() {
+//   const [data, setData] = useState<string[]>([]);
+//   const CACHE_KEY = "educationPageData";
+//   const CACHE_EXPIRATION = 1 * 60 * 1000; 
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       const cached = localStorage.getItem(CACHE_KEY);
+//       const now = new Date().getTime();
+
+//       if (cached) {
+//         const { timestamp, values } = JSON.parse(cached);
+
+//         if (now - timestamp < CACHE_EXPIRATION) {
+//           setData(values);
+//           console.log("Loaded from cache");
+//           return;
+//         }
+//       }
+
+//       const sheetId = import.meta.env.VITE_GOOGLE_SHEET_ID;
+//       const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
+//       const range = "EducationPage!A2:A7";
+
+//       const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`;
+//       const response = await fetch(url);
+//       const result = await response.json();
+
+//       const values = result.values?.flat() || [];
+//       setData(values);
+
+//       localStorage.setItem(
+//         CACHE_KEY,
+//         JSON.stringify({
+//           timestamp: now,
+//           values,
+//         })
+//       );
+
+//       console.log("Fetched from API and cached");
+//     };
+
+//     fetchData();
+
+//     const interval = setInterval(fetchData, CACHE_EXPIRATION);
+
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   return (
+//     <>
+//       <h2>Hi! EducationPage</h2>
+//       {data.map((item, index) => (
+//         <p key={index}>{item}</p>
+//       ))}
+//     </>
+//   );
+// }
+
+// export default EducationPage;
+
+// without timer
