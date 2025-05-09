@@ -3,7 +3,7 @@ import MoreInfoBtn from "../../components/MoreInfoBtn/MoreInfoBtn";
 import { ArrowButton, ButtonGrid, IntroWrapper } from "./styles";
 import introText from "./intro.md?raw";
 import ReactMarkdown from "react-markdown";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft } from "react-icons/fa";
 import YourAreHere from "../../components/YourAreHere/YouAreHere";
 
 function EducationPage() {
