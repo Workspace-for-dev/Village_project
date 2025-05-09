@@ -10,6 +10,7 @@ const globalStyles = css`
 body,
 html {
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -25,10 +26,17 @@ p {
   padding: 0;
 }
 
+a {
+color: white;
+}
+
 #root {
   display: flex;
+  flex-direction: column;
   min-height: 100%;
+  min-width: 100%;
   font-family: Lato, sans-serif;
+  font-size: 1.125rem;
 }
 `
 
